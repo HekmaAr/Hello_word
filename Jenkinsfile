@@ -15,14 +15,14 @@ pipeline {
         stage('Testing Stage') {
             steps {
                 withMaven(maven: 'MAVEN-3.9.9') {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
         stage('Install Stage') {
             steps {
                 withMaven(maven: 'MAVEN-3.9.9') {
-                    sh 'mvn install'
+                    bat 'mvn install'
                 }
             }
         }
